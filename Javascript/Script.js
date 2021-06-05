@@ -6,7 +6,16 @@ $("#Objeto_Arrastrar").draggable({ containment: "#Menu" });
 document.getElementById("azul").checked=true;
 document.getElementById("cuadrado").checked=true;
 
+
+
+//AQUÍ ESTÁ EL RESIZABLE!!!!! (POR SI ACASO ENTRARA, NO ES PARTE DEL EJERCICIO) ;D
 $("#Objeto_Arrastrar").resizable({   handles: "n, e, s, w",   maxHeight: 300,   maxWidth: 300});
+
+
+
+
+
+
 
 
 
