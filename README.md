@@ -1,2 +1,1 @@
-# prueba_examen_rpmi
-Prueba para el examen de RPMI del tercer trimestre
+Este es un simulacro del examen de RPMI, podeís descargarlo para ir ready to die.
