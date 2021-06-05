@@ -1,0 +1,121 @@
+body{
+    background-color:black;
+}
+
+#Menu{
+    background-color: grey;
+    width: 45vw;
+    height: 45vw;
+    position: absolute;
+    top:6%;
+    left:25%;
+    border-radius: 7px;
+}
+
+#Objeto_Arrastrar{
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    top:10%;
+    left:10%;
+    z-index: 10;
+    background-color: blue;
+    cursor:grab;
+}
+#Objeto_Soltar{
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    top:10%;
+    right:10%;
+    border-style: dashed;
+    border-color: white;
+}
+#Objeto_Soltar_txt{
+ margin-top: 40%;
+ color: white;
+ font-size: 0.9vw;
+}
+
+#Submenu{
+    background-color: white;
+    width: 30vw;
+    height: 15vw;
+    position: absolute;
+    top:50%;
+    left:17%;
+}
+#Submenu2{
+    background-color: lightgray;
+    width: 98%;
+    height: 3vw;
+    position: absolute;
+    top:1%;
+    left:1%;
+}
+
+#boton1{
+    background-color:dodgerblue;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+#boton1_txt{
+    margin-top: 15%;
+    color: white;
+    font-size: 0.9vw;
+    margin-left: 30%;
+}
+
+#boton2{
+    background-color:white;
+    width: 20%;
+    height: 100%;
+    left: 20%;
+    position: absolute;
+    cursor: pointer;
+}
+#boton2_txt{
+    margin-top: 15%;
+    color: black;
+    font-size: 0.9vw;
+    margin-left: 30%;
+}
+
+#Color_menu{
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    border-style:solid;
+    width: 80%;
+    height: 20%;
+    font-size: 0.9vw;
+
+}
+
+#Forma_menu{
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    border-style:solid;
+    width: 80%;
+    height: 20%;
+    font-size: 0.9vw;
+
+}
+
+#Return{
+    background-color:salmon;
+    width: 20%;
+    height: 5%;
+    left: 40%;
+    bottom: 10%;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    
+}

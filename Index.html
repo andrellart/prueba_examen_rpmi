@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Practicas</title>
+    
+    <link rel="stylesheet" href="Style/Style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+</head>
+<body>
+<div id="Menu">
+
+    <div id="Objeto_Arrastrar"></div>
+    <div id="Objeto_Soltar"><p id="Objeto_Soltar_txt">¡Hola! ¿Me darías algo de comer?</p></div>
+    <div id="Submenu"> 
+
+        <div id="Submenu2"> 
+            <div id="boton1"><p id="boton1_txt">Color</p></div> 
+            <div id="boton2"><p id="boton2_txt">Forma</p></div> 
+        </div> 
+
+        <fieldset id="Color_menu">
+            <legend>Selecciona un color</legend> 
+            <input type="radio" name="color" id="azul">Azul
+            <input type="radio" name="color" id="violeta">Violeta
+            <input type="radio" name="color" id="rojo">Rojo
+            <input type="radio" name="color" id="verde">Verde
+        </fieldset>
+
+        <fieldset id="Forma_menu">
+            <legend>Selecciona un forma</legend> 
+            <input type="radio" name="forma" id="circulo">Circulo
+            <input type="radio" name="forma" id="cuadrado">Cuadrado
+        </fieldset>
+
+    </div>
+
+    <div id="Return"><p>Cargar de nuevo</p></div>
+
+</div>
+
+    <script src="Javascript/Script.js"></script>
+
+</body>
+</html>
