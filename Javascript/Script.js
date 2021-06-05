@@ -6,6 +6,10 @@ $("#Objeto_Arrastrar").draggable({ containment: "#Menu" });
 document.getElementById("azul").checked=true;
 document.getElementById("cuadrado").checked=true;
 
+$("#Objeto_Arrastrar").resizable({   handles: "n, e, s, w",   maxHeight: 300,   maxWidth: 300});
+
+
+
 $( "#Objeto_Soltar" ).droppable({
     drop: function( event, ui ) {
         if(color!="Rojo"){
