@@ -2,6 +2,27 @@ body{
     background-color:black;
 }
 
+#lista{
+    position: absolute;
+    list-style: none;
+    top: 25%;
+    left: 40%;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5vw;
+    cursor: grab;
+    
+}
+/*ATRIBUTOS DE ESTILO PARA HACER EL SELECTABLE*/
+#lista .ui-selecting { background: #FECA40; }
+#lista .ui-selected { background: #F39814; color: white; }
+
+#img{
+    width: 100%;
+    height: 100%;
+}
+
+
 #Menu{
     background-color: grey;
     width: 45vw;

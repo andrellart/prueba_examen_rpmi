@@ -1,27 +1,47 @@
 
 let color="Azul";
 let forma="Cuadrado";
+let imagen = false;
+
 $("#Forma_menu").hide();
 $("#Objeto_Arrastrar").draggable({ containment: "#Menu" });
 document.getElementById("azul").checked=true;
 document.getElementById("cuadrado").checked=true;
 
 
+//CAMBIAR EL SRC DE UNA IMAGEN AL CLICKAR
+$("#Objeto_Arrastrar").click(function(){
+
+    if (imagen == false){
+        $("#img").attr("src", "img/pato.png");
+        imagen = true;
+    
+    } else {
+        $("#img").attr("src", "");
+        imagen = false;
+    }
+});
+
+
 
 //AQUÍ ESTÁ EL RESIZABLE!!!!! (POR SI ACASO ENTRARA, NO ES PARTE DEL EJERCICIO) ;D
-$("#Objeto_Arrastrar").resizable({   handles: "n, e, s, w",   maxHeight: 300,   maxWidth: 300});
+
+$("#Objeto_Arrastrar").resizable({handles: 'n, e, s, w',  maxHeight: 300, minHeight: 80, maxWidth: 300, minWidth: 80, containment: "#Menu"});
 
 
+//SELECTABLE
+$("#lista").selectable();
 
 
-
-
-
-
+//DROPPABLE
 
 $( "#Objeto_Soltar" ).droppable({
     drop: function( event, ui ) {
-        if(color!="Rojo"){
+       if (imagen == true){
+            $("#Objeto_Soltar_txt").html("Puaj, no me gusta comer patos!!!");
+            $("#Objeto_Arrastrar").animate({left:"10%",top:"10%"});
+
+        }else if(color!="Rojo"){
             $("#Objeto_Soltar_txt").html("Puaj, no me gusta la comida "+color);
             $("#Objeto_Arrastrar").animate({left:"10%",top:"10%"});           
         }else if(forma=="Cuadrado"){
