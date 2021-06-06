@@ -12,6 +12,48 @@ body{
     border-radius: 7px;
 }
 
+/*ATRIBUTOS DE ESTILO PARA HACER EL SELECTABLE*/
+#lista .ui-selecting { background: #FECA40; }
+#lista .ui-selected { background: #F39814; color: white; }
+
+#lista{
+    position: absolute;
+    list-style: none;
+    top: 25%;
+    left: 20%;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+    
+}
+
+#lista li{
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+
+/*ATRIBUTOS DE ESTILO PARA HACER EL SORTABLE*/
+#lista2 li span { position: absolute; margin-left: -1.3em; }
+
+#lista2{
+    position: absolute;
+    list-style: none;
+    top: 25%;
+    left: 50%;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5vw;
+    cursor: grab;
+    
+}
+
+#lista2 li{
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+
+
 #Objeto_Arrastrar{
     width: 7vw;
     height: 7vw;
@@ -21,6 +63,11 @@ body{
     z-index: 10;
     background-color: blue;
     cursor:grab;
+}
+
+#img{
+    width: 100%;
+    height: 100%;
 }
 
 #Objeto_Soltar{

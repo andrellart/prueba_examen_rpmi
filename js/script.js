@@ -1,12 +1,39 @@
 //INICIALIZACIÓN
 let color = "azul";
 let forma = "cuadrado";
+let imagen = false;
 
 $("#azul").prop("checked", true);
 $("#cuadrado").prop("checked", true);
 
 $("#Color_menu").show();
 $("#Forma_menu").hide();
+
+
+//CAMBIAR EL SRC DE UNA IMAGEN AL CLICKAR
+$("#Objeto_Arrastrar").click(function(){
+
+    if (imagen == false){
+        $("#img").attr("src", "img/pato.png");
+        imagen = true;
+    
+    } else {
+        $("#img").attr("src", "");
+        imagen = false;
+    }
+});
+
+
+//RESIZABLE
+
+$("#Objeto_Arrastrar").resizable({handles: 'n, e, s, w',  maxHeight: 300, minHeight: 80, maxWidth: 300, minWidth: 80, containment: "#Menu"});
+
+
+//SELECTABLE
+$("#lista").selectable();
+
+//SORTABLE
+$("#lista2").sortable();
 
 //VENTANA FORMA
 $("#boton2").click(function(){
@@ -55,11 +82,13 @@ $("#verde").click(function(){
 $("#circulo").click(function(){
     forma = "circulo";
     $("#Objeto_Arrastrar").css("border-radius", "50%");
+    $("#img").css("border-radius", "50%");
 });
 
 $("#cuadrado").click(function(){
     forma = "cuadrado";
     $("#Objeto_Arrastrar").css("border-radius", "0%");
+    $("#img").css("border-radius", "0%");
 });
 
 //DRAGGABLE OBJETO
@@ -69,14 +98,19 @@ $("#Objeto_Arrastrar").draggable({containment: "#Menu"});
 
 $("#Objeto_Soltar").droppable({
     drop: function(event, ui){
-        if(color == "rojo" && forma == "circulo"){
+
+        if (imagen == true){
+            $("#Objeto_Soltar_txt").html("Puaj, no me gusta comer patos!!!");
+            $("#Objeto_Arrastrar").animate({left:"10%",top:"10%"});
+
+        }else if(color == "rojo" && forma == "circulo"){
             $("#Objeto_Arrastrar").hide();
             $("#Objeto_Soltar").css("width", "8vw");
             $("#Objeto_Soltar").css("height", "8vw");
             $("#Objeto_Soltar").css("background-color", "red");
             $("#Objeto_Soltar_txt").html("Ñaaaaaaaammmm ¡¡Qué RIIIIICO! Me encantan los objetos redondos y rojos.");
 
-        } else if (color != "rojo" && forma != circulo){
+        } else if (color != "rojo" && forma != "circulo"){
             $("#Objeto_Soltar_txt").html("PUAAAAAAJ!!! No me gustan los objetos de color " + color + " y con forma de " + forma);
             $("#Objeto_Arrastrar").animate({ left: "10%", top: "10%"});
 
